@@ -9,7 +9,7 @@ Vue.use(formulate)
 
 const state = {
 	count: 0,
-	// ...formulateState(),
+	...formulateState(),
 };
 
 const getters = {
@@ -25,7 +25,7 @@ const mutations = {
 	subtract (state, payload) {
 		payload ? (state.count -= payload) : state.count--
 	},
-    // ...formulateMutations(),
+    ...formulateMutations(),
 };
 
 const actions = {
