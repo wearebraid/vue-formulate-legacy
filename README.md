@@ -90,8 +90,9 @@ Vue.use(Vuex)
 
 const state = () => ({
   // your own state data can live next to vue-formulate's data
+  // Note: formulateState is a curried function.
   your: 'data',
-  ...formulateState()
+  ...formulateState()()
 })
 
 const getters = {

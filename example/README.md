@@ -1,14 +1,13 @@
-# Minimalistic example using vue-formulate
+# Vue Formulate Example
 
-This is example is based on the counter example from [ooade/vuex-examples](https://github.com/ooade/vuex-examples/tree/counter)
+A simple example of a registration form using `vue-formulate`. The store is
+set up using a *Root store* configuration (as opposed to using a vuex module).
 
-You might want to get a copy and diff it with this example to see the changes.
+### Installation
 
-## Running it ...
+To install and run the example:
 
-...sh
-cd example
-#
+```sh
 npm install
 npm run dev
 ```
