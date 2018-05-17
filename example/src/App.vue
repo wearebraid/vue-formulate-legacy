@@ -5,7 +5,16 @@
       class="my-form"
       v-if="!values"
       @submit="useFormData"
+      :initial="{
+        'email': 'asdf@qw.fr',
+        'password_confirmation': 'asdf',
+        'password': 'asdf',
+        'animal': 'lion',
+        'qualities': 'chair',
+        'rebirth': true
+      }"
     >
+
       <formulate-element
         name="email"
         type="email"
@@ -28,6 +37,9 @@
         validation-label="Password"
         validation="required|confirmed"
       />
+
+
+
       <formulate-element
         name="animal"
         label="Spirit Animal"
@@ -38,6 +50,29 @@
         />
         <small>Example of a custom field using vue-formulate.</small>
       </formulate-element>
+
+      <formulate-element
+        id="fatuous"
+        name="qualities"
+        type="select"
+        label="Pick a role for your spirit animal to play?"
+          :options="[
+            { id: 'alpha', name: 'Alpha male', value: 'alpha', label: 'Alpha male', },
+            { id: 'wall', name: 'Wallflower', value: 'wall', label: 'Wallflower', },
+            { id: 'chair', name: 'Armchair General', value: 'chair', label: 'Armchair General', },
+            { id: 'qback', name: 'Monday Morning Quarterback', value: 'qback', label: 'Monday Morning Quarterback', },
+          ]"
+      />
+
+      <formulate-element
+        id="maya"
+        name="rebirth"
+        type="checkbox"
+        label="Rebirth as this creature in that role?"
+        placeholder="Check this box to come back as one these."
+      />
+
+
       <formulate-element
         type="submit"
         name="Save"
@@ -148,6 +183,10 @@ label {
   font-weight: normal;
   font-weight: bold;
   margin-bottom: .5em;
+}
+
+input[type="checkbox"]+label {
+  display: inline;
 }
 
 input[type="text"],
