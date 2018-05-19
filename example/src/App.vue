@@ -5,14 +5,7 @@
       class="my-form"
       v-if="!values"
       @submit="useFormData"
-      :initial="{
-        'email': 'asdf@qw.fr',
-        'password_confirmation': 'asdf',
-        'password': 'asdf',
-        'animal': 'lion',
-        'qualities': 'chair',
-        'rebirth': true
-      }"
+      :initial="initialValues"
     >
 
       <formulate-element
@@ -55,13 +48,9 @@
         id="fatuous"
         name="qualities"
         type="select"
+        initial="wall"
         label="Pick a role for your spirit animal to play?"
-          :options="[
-            { id: 'alpha', name: 'Alpha male', value: 'alpha', label: 'Alpha male', },
-            { id: 'wall', name: 'Wallflower', value: 'wall', label: 'Wallflower', },
-            { id: 'chair', name: 'Armchair General', value: 'chair', label: 'Armchair General', },
-            { id: 'qback', name: 'Monday Morning Quarterback', value: 'qback', label: 'Monday Morning Quarterback', },
-          ]"
+        :options="optQualities"
       />
 
       <formulate-element
@@ -96,13 +85,29 @@ export default {
   },
   data () {
     return {
-      values: false
+      values: false,
+      initialValues: {
+        email: 'asdf@qw.com',
+        // password_confirmation: 'asdf',
+        // password: 'asdf',
+        animal: 'sloth',
+        // qualities: 'wall',
+        // rebirth: true
+      }
     }
   },
   computed: {
     ...mapModels({
       animal: 'registration/animal'
-    })
+    }),
+    optQualities() {
+      return [
+            { id: 'alpha', name: 'Alpha Male', value: 'alpha', label: 'Alpha Male', },
+            { id: 'wall', name: 'Wallflower', value: 'wall', label: 'Wallflower', },
+            { id: 'chair', name: 'Armchair General', value: 'chair', label: 'Armchair General', },
+            { id: 'qback', name: 'Monday Morning Quarterback', value: 'qback', label: 'Monday Morning Quarterback', },
+          ];
+    }
   },
   methods: {
     useFormData (vals) {
