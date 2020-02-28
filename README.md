@@ -4,6 +4,11 @@
 [![Current Version](https://img.shields.io/npm/v/vue-formulate.svg)](https://www.npmjs.com/package/vue-formulate)
 [![License](https://img.shields.io/github/license/wearebraid/vue-formulate.svg)](https://github.com/wearebraid/vue-formulate/blob/master/LICENSE.txt)
 
+
+> Vue Formulate has been re-written in version 2! This version will no longer be maintained, please use [@braid/vue-formualte](https://www.npmjs.com/package/@braid/vue-formulate) instead.
+
+--------------------------------------------------------------------------------
+
 ### What is it?
 
 Vue Formulate is a [Vue](https://vuejs.org/) plugin that exposes an elegant
