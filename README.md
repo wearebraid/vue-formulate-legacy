@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/github/license/wearebraid/vue-formulate.svg)](https://github.com/wearebraid/vue-formulate/blob/master/LICENSE.txt)
 
 
-> Vue Formulate has been re-written in version 2! This version will no longer be maintained, please use [@braid/vue-formualte](https://www.npmjs.com/package/@braid/vue-formulate) instead.
+> Vue Formulate has been re-written in version 2! This version will no longer be maintained, please use [@braid/vue-formulate](https://www.npmjs.com/package/@braid/vue-formulate) instead.
 
 --------------------------------------------------------------------------------
 
