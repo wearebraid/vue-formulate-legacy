@@ -27,7 +27,7 @@ class Formulate {
    * @param {Vue} Vue
    */
   install (Vue, options = {}) {
-    Vue.prototype.$formulate = this
+    Vue.prototype.$formulateLegacy = this
     options = Object.assign(this.defaultOptions, options)
     if (options.registerComponents) {
       Vue.component(options.tags.Formulate, FormulateGroup)

@@ -20,7 +20,7 @@ export default {
     module: {
       type: [String, Boolean],
       default: function () {
-        return this.$formulate.options.vuexModule
+        return this.$formulateLegacy.options.vuexModule
       }
     },
     initial: {
@@ -149,7 +149,7 @@ export default {
       }))
     },
     async validateField ({field, validation, label}) {
-      let errors = await this.$formulate.validationErrors({
+      let errors = await this.$formulateLegacy.validationErrors({
         field,
         value: this.values[field],
         label

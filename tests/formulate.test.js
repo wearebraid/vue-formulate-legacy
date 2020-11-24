@@ -6,7 +6,7 @@ test('checks plugin registration', async t => {
   let components = []
   VueMock.component = (name, object) => components.push({name, object})
   formulate.install(VueMock)
-  t.truthy(VueMock.prototype.$formulate)
+  t.truthy(VueMock.prototype.$formulateLegacy)
   t.is(2, components.length)
 })
 
